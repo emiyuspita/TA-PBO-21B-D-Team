@@ -3,126 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: s#f5f1f1;
+            background-color: #f4f4f4;
+            margin: 80;
+            padding: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
-        .login-container {
+        form {
             max-width: 400px;
-            margin: 100px auto;
-            padding: 20px;
-            background-color: #72b7f0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
+            background-color: #76b9e9;
+            padding: 80px;
+            border-radius: 2px;
+            box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
         }
 
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         input {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
             box-sizing: border-box;
         }
 
         button {
-            background-color: #0c0c0c;
-            color: #fff;
-            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
             border: none;
-            border-radius: 3px;
+            border-radius: 4px;
             cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <div class="login-container" id="loginContainer">
-        <h2 align="center">Selamat Datang</h2>
-        <form id="loginForm" onsubmit="return validateSignIn()">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="signInUsername" name="username" required>
-            </div>
+    
+    <form action="Home.html" method="post">
+        <h2 align="center">Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="signInPassword" name="password" required>
-            </div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-            <button type="submit">Sign In</button>
-        </form>
-
-        <p>Don't have an account? <a href="#" onclick="showSignUpForm()">Sign Up</a></p>
-    </div>
-
-    <div class="login-container" id="signUpContainer" style="display: none;">
-        <h2>Sign Up</h2>
-        <form id="signUpForm" onsubmit="return validateSignUp()">
-            <div class="form-group">
-                <label for="newUsername">New Username:</label>
-                <input type="text" id="newUsername" name="newUsername" required>
-            </div>
-
-            <div class="form-group">
-                <label for="newPassword">New Password:</label>
-                <input type="password" id="newPassword" name="newPassword" required>
-            </div>
-
-            <button type="submit">Sign Up</button>
-        </form>
-
-        <p>Already have an account? <a href="#" onclick="showSignInForm()">Sign In</a></p>
-    </div>
-
-    <script>
-        function validateSignIn() {
-            var username = document.getElementById('signInUsername').value;
-            var password = document.getElementById('signInPassword').value;
-
-            // Contoh validasi sederhana untuk Sign In
-            if (username === 'admin' && password === 'password') {
-                alert('Sign In successful!');
-                return true; // Form akan disubmit
-            } else {
-                alert('Sign In failed. Check your username and password.');
-                return false; // Form tidak akan disubmit
-            }
-        }
-
-        function validateSignUp() {
-            var newUsername = document.getElementById('newUsername').value;
-            var newPassword = document.getElementById('newPassword').value;
-
-            // Contoh validasi sederhana untuk Sign Up
-            // Implementasikan validasi tambahan sesuai kebutuhan aplikasi Anda
-            if (newUsername !== '' && newPassword !== '') {
-                alert('Sign Up successful!');
-                showSignInForm(); // Setelah sign up, tampilkan form sign in
-                return false; // Form tidak akan disubmit
-            } else {
-                alert('Sign Up failed. Please fill in all fields.');
-                return false; // Form tidak akan disubmit
-            }
-        }
-
-        function showSignUpForm() {
-            document.getElementById('loginContainer').style.display = 'none';
-            document.getElementById('signUpContainer').style.display = 'block';
-        }
-
-        function showSignInForm() {
-            document.getElementById('loginContainer').style.display = 'block';
-            document.getElementById('signUpContainer').style.display = 'none';
-        }
-    </script>
+        <button type="submit">Login</button>
+    </form>
 </body>
 </html>

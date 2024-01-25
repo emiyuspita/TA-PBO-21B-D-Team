@@ -1,69 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 80;
-            padding: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #3498db, #2c3e50);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        form {
-            max-width: 400px;
-            background-color: #76b9e9;
-            padding: 80px;
-            border-radius: 2px;
-            box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-        }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 16px;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
+    label {
+      margin-bottom: 8px;
+      color: #333;
+    }
 
-        button {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+    input {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    button {
+      padding: 12px;
+      background-color: #2ecc71;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 16px;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+    .google-login {
+      background-color: #dd4b39;
+    }
+
+    .facebook-login {
+      background-color: #1877f2;
+    }
+
+    .login-option {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-option:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+  <title>Login Form</title>
 </head>
 <body>
-    <div class="login-container" id="loginContainer">
-    
+  <div class="container">
     <form action="Home.html" method="post">
         <h2 align="center">Login</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+      <label for="username" style="color: #333;">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password" style="color: #333;">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Login</button>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="submit">Login</button>
+      <a href="#" class="login-option google-login" onclick="loginWithGoogle()">Login with Google</a>
+      <a href="#" class="login-option facebook-login" onclick="loginWithFacebook()">Login with Facebook</a>
     </form>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      
+      // Ambil nilai input
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      
+      // Validasi login (contoh sederhana, gantilah dengan logika keamanan yang lebih kuat)
+      if (username === 'user' && password === 'password') {
+        alert('Login berhasil!');
+      } else {
+        alert('Login gagal. Periksa kembali username dan password Anda.');
+      }
+    }
+
+    function loginWithGoogle() {
+      alert('Login with Google clicked!');
+      // Implementasi login dengan Google di sini
+    }
+
+    function loginWithFacebook() {
+      alert('Login with Facebook clicked!');
+      // Implementasi login dengan Facebook di sini
+    }
+  </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran</title>
+    <title>Pendaftaran n</title>
      <!-- css internal-->
     <style>
         body {
@@ -387,6 +387,17 @@
                 </section>
             </section>
 
+        
+        <hr />
+
+        <!-- area description -->
+        <section class="area_description">
+            <p>Penjelasan :</p>
+            <P>-Nama Siswa hanya dapat diisi oleh huruf (A-Z atau a-z) dan spasi</P>
+            <p>-NISN hanya dapat diisi oleh angka (0-9)</p>
+            <p>-Nomor Telepon hanya dapat diisi oleh angka (0-9)</p>
+          </section>
+
         <!-- area component -->
         <section class="area_component">
             <!-- area tombol -->
@@ -443,6 +454,60 @@
                             console.log ("OK");
                         }
                     });
+
+            
+            //  buat arrow function agar isi data hanya dapat diisi angka
+            const keyNumber = (event) => {
+                if (event.key >= "0" && event.key <= "9") {
+                return true;
+                } else {
+                    event.preventDefault();
+                return false;
+                }
+            };
+
+            //  buat arrow function agar isi data hanya dapat diisi huruf dan spasi
+            const keyText = (event) => {
+                if (
+                (event.key >= "a" && event.key <= "z") ||
+                (event.key >= "A" && event.key <= "Z") ||
+                event.which == 32 ||  event.key  == "." || event.key == ","
+                ) {
+                return true;
+                } else {
+                    event.preventDefault();
+                return false;
+                }
+            };
+            //  buat arrow function agar dapat berpindah ke komponen lain
+            const keyEnter = (event, component) => {
+                if (event.key == "Enter") {
+                component.focus();
+                }
+            };
+
+            // buat event "keypress" (kejadian saat menekan dan menahan tombol tertentu)
+            // panggil fungsi "keyNumber" agar "txt_nisn", "txt_Telepon","txt_TeleponIbu" hanya dapat diisi angka
+            txt_nisn.addEventListener(
+                "keypress",
+                (event) => (event.returnValue = keyNumber(event))
+            );
+            txt_Telepon.addEventListener(
+                "keypress",
+                (event) => (event.returnValue = keyNumber(event))
+            );
+            txt_TeleponIbu.addEventListener(
+                "keypress",
+                (event) => (event.returnValue = keyNumber(event))
+            );
+
+            // buat event "keypress" (kejadian saat menekan dan menahan tombol tertentu)
+            // panggil fungsi "keyText" agar "txt_nama" hanya dapat diisi huruf dan spasi
+            txt_nama.addEventListener(
+                "keypress",
+                (event) => (event.returnValue = keyText(event))
+            );
+
         </script>
 
     </div>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran x</title>
+    <title>Pendaftaran</title>
+     <!-- css internal-->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,104 +48,35 @@
             background-color: #555;
         }
         
-        .area_input,.area_output,.area_button 
-        {
+        .area_component {
             display: flex;
-            /*flex-direction:column;*/
-            /* height: 70px; */
             align-items: center;
-            margin-bottom: 10px;
+            margin: 10px;
         }
-        .area_label
-        {
-            width: 20%;
-            /* background-color: rgb(255, 3, 3); */
-            /* display: flex; */
-            /* pengaturan object (horizontal) */
-            /* justify-content: start; */
-
-            /* pengaturan (objek vertikar) */
-            /* align-items: center; */
+        .area_label {
+            width: 15%;
+        }
+        .area_input {
+            width: 85%;
+        }
+        .txt_component {
+            width: 30%;
         }
 
-        .area_textbox
-        {
-            width: 80%;
-            /* background-color: aqua; */
-           
+        .area_description {
+            width: 100%;
+            line-height: 5px;
         }
 
-        .txt_component,.lbl_component
-        {
-            height: 35px;
-            width: 50%;
-            border: 1px solid #d3d3d3;
-            border-radius: 25px;
-            padding: 0 10px;
+        .btn_component {
             outline: 0;
-        }
-
-        /* Pseudo css/class */
-        .txt_component:focus
-        {
-            border: 3px solid #FF0000;
-        }
-
-        .lbl_component
-        {
-            background-color: #b7aeae
-        }
-
-        .btn_primary
-        {
-            background-color: #FF0000;
-            color: #FFFFFF;
             border-radius: 25px;
-            border: 1px solid #FF0000;
-            outline: 0;
-            width: 125px;
-            height: 35px;
-        }
-
-        .btn_secondary
-        {
-            background-color: #FFFFFF;
-            color: #FF0000;
-            border-radius: 25px;
-            border: 1px solid #FFFFFF;
-            outline: 0;
-            width: 125px;
-            height: 35px;
-        }
-
-        .btn_component
-        {
-            border-radius: 10%;
+            border: 1px solid #333333;
             height: 40px;
-            width: 100px;
-            background: #FF0000;
-            color: aliceblue;
-            margin-top: 30px;
+            padding: 10px 30px;
             cursor: pointer;
-            outline: 0;
-            border: 1px solid #000000;
-            
+            background: #a4a4a0;
         }
-
-        .btn2_component
-        {
-            border-radius: 10%;
-            height: 40px;
-            width: 100px;
-            color: #FF0000;
-            background: aliceblue;
-            margin-top: 30px;
-            cursor: pointer;
-            outline: 0;
-            border: 1px solid #000000;
-            
-        }
-
     </style>
 </head>
 <body>
@@ -154,10 +86,9 @@
 
     <nav>
         <ul>
-            <li><a href="menu.html">Home</a></li>
-            <li><a href="informasi pendaftaran.html">Informasi pendaftaran</a></li>
-            <li><a href="pendaftaran.html">pendaftaran</a></li>
-            <li><a href="Kontak.html">Kontak</a></li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="InformasiPendaftaran.html">Informasi pendaptaran</a></li>
+            <li><a href="pendaftaran.html">pendaptaran</a></li>
         </ul>
     </nav>
 
@@ -167,214 +98,352 @@
         <h2>Sekolah Yang Di Daftar</h2>
         <p>Junior High - SMP</p>
         
-        <h2>Informasi Pendaftar</h2>
-        <!-- Area nama Siswa-->
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Nama Siswa *</label>
-            </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Isi Nama Siswa"
-                class="txt_component">
-            </section>
-        </section>
-
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">NIK *</label>
-            </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="NIK"
-                class="txt_component">
-            </section>
-        </section>
-
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Jenis Kelamin *</label>
-            </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Jenis Kelamin"
-                class="txt_component">
-            </section>
-        </section>
+        <h2>Identitas Siswa :</h2>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_nama">Nama Lengkap</label>
+                </section>
         
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Tangal Lahir *</label>
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_nama"
+                    placeholder="Isi Nama Lengkap ( Sesuai Ijazah )"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Tangal Lahir"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Alamat *</label>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_nisn">NISN</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_nisn"
+                    placeholder="Isi Nomor NISN"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Alamat Saat Ini"
-                class="txt_component">
-            </section>
-        </section>
 
-        <h2>Informasi Ayah</h2>
-        <!-- Area nama Ayah-->
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Nama Ayah *</label>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_JenisKelamin">Jenis Kelamin</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_JenisKelamin"
+                    placeholder="Jenis Kelamin"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Isi Nama Ayah"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Nomor Telepon *</label>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_AgamaSiswa">Agama</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_AgamaSiswa"
+                    placeholder="Agama"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Nomor Telepon"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Alamat Email *</label>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_Sekolah">Sekolah Asal</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_Sekolah"
+                    placeholder="Sekolah Asal"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Alamat Email"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Alamat Rumah *</label>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_TanggalLahir">Tanggal Lahir </label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_TanggalLahir"
+                    placeholder="Tanggl Lahir"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Alamat Rumah"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Pekerjaan *</label>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_Alamat">Alamat</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_Alamat"
+                    placeholder="Alamat Saat Ini"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Pekerjaan"
-                class="txt_component">
-            </section>
-        </section>
 
-        <h2>Informasi Ibu</h2>
-        <!-- Area nama Ayah-->
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Nama Ibu *</label>
+        <h2>Identitas Orang Tua (AYAH) :</h2>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_Ayah">Nama Ayah</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_Ayah"
+                    placeholder="Nama Ayah"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Isi Nama Ibu"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Nomor Telepon *</label>
+             <!-- area component -->
+             <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_AgamaAyah">Agama</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_AgamaAyah"
+                    placeholder="Agama"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Nomor Telepon"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Alamat Email *</label>
+             <!-- area component -->
+             <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_Telepon">Nomor Telepon</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_Telepon"
+                    placeholder="Nomor Telepon Ayah"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Alamat Email"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Alamat Rumah *</label>
+             <!-- area component -->
+             <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_AlamatAyah">Alamat</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_AlamatAyah"
+                    placeholder="Alamat Saat Ini"
+                    class="txt_component"
+                />
+                </section>
             </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Alamat Rumah"
-                class="txt_component">
-            </section>
-        </section>
 
-        <section class="area_input">
-            <!-- area label -->
-            <section class="area_label">
-                <label for="">Pekerjaan *</label>
-            </section>
-            <!-- area textbox -->
-            <section class="area_textbox">
-                <input type="text" name="" id="text_nama"
-                maxlength="100" placeholder="Pekerjaan"
-                class="txt_component">
-            </section>
-        </section>
 
-        <!-- area tombol -->
-        <section>
-            <!-- tombol proses -->
+        <h2>Identitas Orang Tua (IBU) :</h2>
+            <!-- area component -->
+            <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_ibu">Nama Ibu</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_ibu"
+                    placeholder="Nama Ibu"
+                    class="txt_component"
+                />
+                </section>
+            </section>
+
+             <!-- area component -->
+             <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_AgamaIbu">Agama</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_AgamaIbu"
+                    placeholder="Agama"
+                    class="txt_component"
+                />
+                </section>
+            </section>
+
+             <!-- area component -->
+             <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_TeleponIbu">Nomor Telepon</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_TeleponIbu"
+                    placeholder="Nomor Telepon Ibu"
+                    class="txt_component"
+                />
+                </section>
+            </section>
+
+             <!-- area component -->
+             <section class="area_component">
+                <!-- area label -->
+                <section class="area_label">
+                <label for="txt_Alamatibu">Alamat</label>
+                </section>
+        
+                <!-- area input -->
+                <section class="area_input">
+                <input
+                    type="text"
+                    name=""
+                    id="txt_Alamatibu"
+                    placeholder="Alamat Saat Ini"
+                    class="txt_component"
+                />
+                </section>
+            </section>
+
+        <!-- area component -->
+        <section class="area_component">
+            <!-- area tombol -->
             <button id="btn_Sumbit" class="btn_component">Sumbit</button>
         </section>
+            
+        <!-- internal js -->
+        <script>
+        // inisialiasi variabel komponen
+            let txt_nama = document.querySelector("#txt_nama");
+            let txt_nisn = document.querySelector("#txt_nisn");
+            let txt_JenisKelamin = document.querySelector("#txt_JenisKelamin");
+            let txt_AgamaSiswa = document.querySelector("#txt_AgamaSiswa");
+            let txt_Sekolah = document.querySelector("#txt_Sekolah");
+            let txt_TanggalLahir = document.querySelector("#txt_TanggalLahir");
+            let txt_Alamat = document.querySelector("#txt_Alamat");
+            let txt_Ayah = document.querySelector("#txt_Ayah");
+            let txt_AgamaAyah = document.querySelector("#txt_AgamaAyah");
+            let txt_Telepon = document.querySelector("#txt_Telepon");
+            let txt_AlamatAyah = document.querySelector("#txt_AlamatAyah");
+            let txt_ibu = document.querySelector("#txt_ibu");
+            let txt_AgamaIbu = document.querySelector("#txt_AgamaIbu");
+            let txt_TeleponIbu = document.querySelector("#txt_TeleponIbu");
+            let txt_Alamatibu = document.querySelector("#txt_Alamatibu");
+            let btn_Sumbit = document.querySelector("#btn_Sumbit")
 
-
+            // event pada saat "btn_Sumbit" di klik
+            btn_Sumbit.addEventListener("click", function (){
+            // jika salah satu data input belum diisi
+                if (
+                    txt_nama.value == "" ||
+                    txt_nisn.value == "" || 
+                    txt_JenisKelamin.value == "" || 
+                    txt_AgamaSiswa.value =="" ||
+                    txt_Sekolah.value == "" ||
+                    txt_TanggalLahir.value == "" ||
+                    txt_Alamat.value == "" ||
+                    txt_Ayah.value == "" ||
+                    txt_AgamaAyah.value == "" ||
+                    txt_Telepon.value == "" ||
+                    txt_AlamatAyah .value == "" ||
+                    txt_ibu.value == "" ||
+                    txt_AgamaIbu.value == "" ||
+                    txt_TeleponIbu.value == "" ||
+                    txt_Alamatibu.value == "" ||
+                    btn_Sumbit.value == ""
+                    )
+                    {
+                        alert("Lengkapi seluruh data")
+                    }
+                //jika data sudah diisi
+                    else
+                        {
+                            console.log ("OK");
+                        }
+                    });
+        </script>
 
     </div>
 </body>

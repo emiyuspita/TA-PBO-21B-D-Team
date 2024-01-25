@@ -80,9 +80,10 @@
   <title>Login Form</title>
 </head>
 <body>
-  <div class="container">
     <form action="Home.html" method="post">
-        <h2 align="center">Login</h2>
+  <div class="container">
+    <form id="loginForm" onsubmit="submitForm(event)">
+      <h2 style="color: #333;">Login</h2>
       <label for="username" style="color: #333;">Username:</label>
       <input type="text" id="username" required>
       <label for="password" style="color: #333;">Password:</label>
@@ -93,7 +94,7 @@
       <a href="#" class="login-option facebook-login" onclick="loginWithFacebook()">Login with Facebook</a>
     </form>
   </div>
-
+  
   <script>
     function submitForm(event) {
       event.preventDefault();
@@ -109,15 +110,31 @@
         alert('Login gagal. Periksa kembali username dan password Anda.');
       }
     }
+    function loginWithGoogle() {
+    // Ganti dengan URL OAuth Google yang sesuai
+    var clientId = 'YOUR_CLIENT_ID';
+    var redirectUri = 'YOUR_REDIRECT_URI';
+    var scope = 'email profile';
+    var state = 'google';
+
+    var authUrl = 'https://accounts.google.com/o/oauth2/auth' +
+      '?client_id=' + encodeURIComponent(clientId) +
+      '&redirect_uri=' + encodeURIComponent(redirectUri) +
+      '&response_type=code' +
+      '&scope=' + encodeURIComponent(scope) +
+      '&state=' + encodeURIComponent(state);
+
+    window.location.href = authUrl;
+  }
 
     function loginWithGoogle() {
-      alert('Login with Google clicked!');
-      // Implementasi login dengan Google di sini
+      // Ganti dengan URL OAuth Google yang sesuai
+      window.location.href = 'https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1';
     }
 
     function loginWithFacebook() {
-      alert('Login with Facebook clicked!');
-      // Implementasi login dengan Facebook di sini
+      // Ganti dengan URL OAuth Facebook yang sesuai
+      window.location.href = 'https://www.facebook.com/v12.0/dialog/oauth?client_id=YOUR_APP_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email';
     }
   </script>
 </body>

@@ -46,53 +46,186 @@
         nav a:hover {
             background-color: #555;
         }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #333;
+            margin-left: -1px;
+        }
+
+        .event {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .event::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #3498db;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .event.left::before {
+            background-color: #e74c3c;
+        }
+
+        .event .content {
+            position: relative;
+            margin-left: 30px;
+            padding: 15px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .event.left .content {
+            background-color: #e74c3c;
+        }
+
+        .event .content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -6px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px;
+            border-color: transparent transparent transparent #3498db;
+            transform: translateY(-50%);
+        }
+
+        .event.left .content::before {
+            border-color: transparent #852a20 transparent transparent;
+            left: auto;
+            right: -6px;
+        }
     </style>
 </head>
 <body>
     <header>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logo</title>
-    
-    <img src="logo.png">
-    <h1>SMP LAZUARDI HAURA BANDAR LAMPUNG</h1>    
+        <h1>SMP LAZUARDI HAURA BANDAR LAMPUNG</h1>
     </header>
 
     <nav>
         <ul>
             <li><a href="Home.html">Home</a></li>
             <li><a href="InformasiPendaftaran.html">Informasi pendaftaran</a></li>
-            <li><a href="pendaftaran.html">pendaftaran</a></li>
+            <li><a href="Pendaptaran.html">pendaftaran</a></li>
         </ul>
     </nav>
-
     <div>
-        <!-- Konten  -->
-        <h2>LATAR BELAKANG</h2>
-        <p>Masa depan yang didalamnya anak-anak kita akan hidup, diprediksi akan memiliki berbagai ciri persaingan yang ketat,
-        pergaulan global yang intens, perubahan-perubahan yang sangat cepat di berbagai bidang kehidupan dengan segala permasalahanya,
-        serta tantangan sekaligus kebutuhan kepada kehidupan keberagamaan yang lebih bermoral. Di sisi lain, pendidikan pada umumnya, 
-        kurang mengarahkan proses belajar-mengajar kepada upaya-upaya pembangkitan kreativitas anak-didik, 
-        yang sesungguhnya merupakan kunci sukses anak-anak kita di masa depan.</p>
-
-        <h2>TUJUAN</h2>
-        <P>Melahirkan manusia-manusia indonesia yang mencintai ilmu pengetahuan, terampil dalam mengembangkan ilmunya, kreatif, 
-        menguasai kemampuan-kemampuan dasar dan memiliki keluasan wawasan, percaya diri, komunikatif, memiliki keprihatinan sosial, 
-        cinta lingkungan, serta beriman dan berakhlaq mulia.</P>
-
-        <h2 ALIGN="center">FILOSOFI</h2>
-        <ol>
-            <li>MULTIPLEINTELLIGENCE</li>
-            <P>Setiap anak adalah pribadi yang unik dan memiliki potensi kecerdasan majemuk (multiple intelligences).</P>
-            <li>PEERGROUP</li>
-            <P>Anak lebih cepat belajar di tengah lingkungan teman sebayanya (peer group).</P>
-            <li>CREATIVITYCONFIDENCE</li>
-            <P>Kreativitas dan kepercayaan diri anak lahir dari suasana belajar yang menyenangkan, ramah, penuh kasih sayang, kontekstual, bersifat praktik (hands-on) dan mengaktifkan kemampuan berpikir (brain-based).</P>
-            <li>LEARNINGENVIRONMENT</li>
-            <p>Lingkungannya merupakan laboratorium belajar yang tak terbatas.</p>
-            <li>COOPERATIVESOCIETY</li>
-            <p>Keberhasilan pembelajaran hanya dapat dicapai jika ada kerjasama yang baik antara guru/sekolah, orang tua dan masyarakat secara keseluruhan</p>
-        </ol>
+        <h1 align="center">SEJARAH LAZUARDI</h1>
     </div>
+
+    <div class="timeline">
+        <div class="event">
+            <div class="content">
+                <h3>1994</h3>
+                <p>Sekolah-sekolah di lingkungan Yayasan Lazuardi Hayati dimulai dengan pendirian TK Islam Kanita Azzahra pada tahun 1994 di Cinere oleh Ibu Lubna Assagaf</p>
+            </div>
+        </div>
+    
+        <div class="event left">
+            <div class="content">
+                <h3>2003</h3>
+                <p>Berdiri SMA Lazuardi GIS jurusan IPA & IPS di Sawangan, Depok</p>
+            </div>
+        </div>
+    
+        <div class="event">
+            <div class="content">
+                <h3>2004</h3>
+                <p>Berdiri cabang Lampung dengan nama Lazuardi Haura</p>
+            </div>
+        </div>
+
+        <div class="event left">
+            <div class="content">
+                <h3>2005</h3>
+                <ol type="a">
+                    <li>Membuka SMP di kompleks Cinere</li>
+                    <li>Berdiri cabang TK dan SD Meruya, Jakarta Barat dengan nama Lazuardi Cordova
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="content">
+                <h3>2006</h3>
+                <p>Berdiri cabang TK dan SD Solo bernama Lazuardi Kamila</p>
+            </div>
+        </div>
+
+        <div class="event left">
+            <div class="content">
+                <h3>2008</h3>
+                <ol type="a">
+                    <li>Berdiri cabang SMP di Cilandak, Jakarta Selatan dengan nama Lazuardi Jakarta</li>
+                    <li>Berdiri cabang Pra-TK & TK Condet, Jakarta Timur dengan nama Lazuardi Karima</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="content">
+                <h3>2012</h3>
+                    <p>Membuka SMP Lazuardi Haura di Lampung</p>
+            </div>
+        </div>
+
+        <div class="event left">
+            <div class="content">
+                <h3>2013</h3>
+                <ol type="a">
+                    <li>Berdiri cabang TK & SMP di Margonda, Depok dengan nama Lazuardi Al Falah</li>
+                    <li>Berdiri cabang TK, SD & SMP di Klaten, Jawa Tengah dengan nama Lazuardi Al Falah</li>
+                    <li>Berdiri cabang SD dan SMP di Bekasi, dengan nama Lazuardi Al Kaffah</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="content">
+                <h3>2014</h3>
+                    <p>Berdiri cabang SD di Banyuwangi dengan nama Lazuardi Tursina</p>
+            </div>
+        </div>
+
+        <div class="event left">
+            <div class="content">
+                <h3>2015</h3>
+                <ol type="a">
+                    <li>Berdiri cabang SD & SMP di Makassar dengan nama Lazuardi Atthaillah</li>
+                    <li>Berdiri Pra-TK,TK dan SD di Kendari dengan nama Lazuardi Ibnu Sina</li>
+                </ol>
+            </div>
+        </div>
+        
+        
+        <div class="event">
+            <div class="content">
+                <h3>2018</h3>
+                    <p>Tranformed into Lazuardi Global Compassionate Scool</p>
+            </div>
+        </div>
+
 </body>
 </html>

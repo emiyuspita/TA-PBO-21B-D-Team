@@ -1,111 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #3498db, #2c3e50);
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InformasiPendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Memperkuat efek bayangan */
-      width: 80%; /* Lebar container disesuaikan */
-      max-width: 600px; /* Lebar maksimum untuk meningkatkan responsivitas */
-      text-align: center;
-    }
+        header {
+            background-color: #67c8e0;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
 
-    h1 {
-      color: #e74c3c; /* Warna merah yang mencolok */
-    }
+        nav {
+            display: flex;
+            background-color: #050505;
+            width: 100%;
+        }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px; /* Margin atas untuk memisahkan judul dengan menu */
-    }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: left;
+            width: 100%;
+        }
 
-    li {
-      margin-bottom: 10px;
-    }
+        nav li {
+            margin-right: 15px;
+        }
 
-    a {
-      text-decoration: none;
-      color: #fff;
-      display: block;
-      padding: 10px;
-      border: 1px solid #2ecc71;
-      border-radius: 4px;
-      background-color: #2ecc71;
-      color: #fff;
-      transition: background-color 0.3s ease;
-    }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
 
-    a:hover {
-      background-color: #27ae60;
-    }
+        nav a:hover {
+            background-color: #555;
+        }
 
-    .info-container {
-      display: none;
-      margin-top: 20px;
-    }
+        .container {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 50px;
+        }
 
-    .info-container.active {
-      display: block;
-      animation: fadeIn 0.5s ease; /* Animasi muncul dengan fading */
-    }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
-  <title>Informasi Pendaftaran Siswa</title>
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: block;
+            padding: 10px;
+            border: 1px solid #060606;
+            border-radius: 4px;
+            background-color: #0f100f;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #27ae60;
+        }
+
+        .info-container {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .info-container.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+            margin: 50px auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
-
-<nav>
-    <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="InformasiPendaftaran.html">Informasi pendaptaran</a></li>
-        <li><a href="Pendaftaran.html">pendaptaran</a></li>
-    </ul>
-</nav>
-
 <body>
-  <div class="container">
-    <h1>Panduan Penerimaan Siswa Baru (PSB) Lazuardi Haura GSC<br>
-    Tahun Ajaran 2023/2024</h1>
-    <ul>
-      <li><a href="#" onclick="showRegistrationInfo('info1')">Informasi 1</a></li>
-      <li><a href="#" onclick="showRegistrationInfo('info2')">Informasi 2</a></li>
-      <li><a href="#" onclick="showRegistrationInfo('info3')">Informasi 3</a></li>
-    </ul>
+    <header>
+        <h1>SMP LAZUARDI HAURA BANDAR LAMPUNG</h1>
+    </header>
 
-    <div id="info1" class="info-container">
-      <h3>Informasi 1</h3>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="InformasiPendaftaran.html">Informasi pendaftaran</a></li>
+            <li><a href="Pendaptaran.html">pendaftaran</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Panduan Penerimaan Siswa Baru (PSB) Lazuardi Haura GSC<br>Tahun Ajaran 2023/2024</h1>
+        <ul>
+          <li><a href="#" onclick="showRegistrationInfo('info1')">Informasi 1</a></li>
+          <li><a href="#" onclick="showRegistrationInfo('info2')">Informasi 2</a></li>
+         
+        </ul>
+      </div>
+
+      <div id="info1" class="info-container">
+        <!-- Konten Informasi 1 -->
+          <h2>Informasi Sekolah</h2>
             <p align="justify">Kami berharap orang tua mendapatkan informasi yang lengkap tentang konsep pembelajaran dan kebijakan sekolah
                 Lazuardi Haura GCS, untuk itu dengan senang hati kami akan memberikan penjelasan kepada orang tua / wali murid melalui 
                 contact person kami, baik secara online atau dengan mengunjungi kami di sekolah. Bagi orang tua / wali murid yang menginginkan, 
                 sekolah juga menyediakan One Day Trial class (untuk siswa Pra TK dan TK) atau School Tour dan sit in  (untuk siswa SD dan SMP).</p>
             <h2>Formulir pendaftaran</h2>
-            <ol type="1" >
-               <p align="justify">
+            <ol type="1">
                 <li> Pendaftaran PSB dilakukan dengan membayar biaya pendaftaran sebesar Rp300.000 (Tiga Ratus Ribu Rupiah).</li>
                 <li> Orang tua akan mendapatkan Buku Formulir PSB untuk diisi, dilengkapi dan orang tua dapat mempelajari proses pendaftaran yang tercantum pada panduan pendaftaran</li>
-                <li> Panitia akan segera menentukan jadwal observasi siswa sekaligus interview bagi orangtua. Penentuan jadwal akan diberitahukan kemudian.</li></p>
+                <li> Panitia akan segera menentukan jadwal observasi siswa sekaligus interview bagi orangtua. Penentuan jadwal akan diberitahukan kemudian.</li>
             </ol>
             <h2>Kelengkapan Formulir PSB</h2>
             <ol type="1">
@@ -117,31 +155,24 @@
                     <li>Pas foto berwarna  ukuran 3×4 = 6 lembar, ukuran 2×3 = 4 lembar, ukuran 5R = 3 lembar</li>
                     <li>Photo ananda bersama keluarga 5R= 3 lembar (bila merupakan hasil dari cetak printer, mohon photo untuk dilaminating)</li>
                     <li>Menyerahkan medical record dari dokter keluarga (formulir dari sekolah)</li>
-                </ol>
+                    <li>Menyerahkan psikotes record dari psikolog bagi calon siswa Special Need (SN), bilamana dibutuhkan.</li>
+                  </ol>
             </ol>
-            <p>Menyerahkan psikotes record dari psikolog bagi calon siswa Special Need (SN), bilamana dibutuhkan.</p>
-    </div>
-
-    <div id="info2" class="info-container">
-      <h3>Informasi 2</h3>
-      <p>Deskripsi informasi pendaftaran siswa 2.</p>
-    </div>
-
-    <div id="info3" class="info-container">
-      <h3>Informasi 3</h3>
-      <p>Deskripsi informasi pendaftaran siswa 3.</p>
-    </div>
-  </div>
-
+            
+      </div>
+    
+      <div id="info2" class="info-container">
+        <!-- Konten Informasi 2 -->
+        
+      
+      <!-- kode js -->
   <script>
     function showRegistrationInfo(infoId) {
-      // Sembunyikan semua informasi
       var infoElements = document.querySelectorAll('.info-container');
       infoElements.forEach(function (element) {
         element.classList.remove('active');
       });
 
-      // Tampilkan informasi yang dipilih
       var selectedInfo = document.getElementById(infoId);
       if (selectedInfo) {
         selectedInfo.classList.add('active');
